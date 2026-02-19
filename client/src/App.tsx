@@ -1,12 +1,22 @@
-import React from "react";
+import { useState } from 'react'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
-      <h1>Broadway Smile Dental Clinic</h1>
-      <p>Welcome to our dental care website.</p>
+    <div className="App">
+      <header>
+        <h1>Broadway Smile Demo</h1>
+        <p>Welcome to the portfolio showcase</p>
+      </header>
+      <main>
+        <button onClick={() => setCount((c) => c + 1)}>
+          count is {count}
+        </button>
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
